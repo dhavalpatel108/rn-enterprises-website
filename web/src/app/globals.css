@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Noto+Serif:wght@400;700&display=swap');
+
+:root {
+  --background: #f9f9f9;
+  --primary: #000000;
+  --on-primary: #e2e2e2;
+  --surface-container: #eeeeee;
+  --surface-container-low: #f3f3f3;
+  --surface-container-lowest: #ffffff;
+  --surface-dim: #dadada;
+  --outline-variant: #c6c6c6;
+  --on-surface: #1b1b1b;
+  
+  --spacing-4: 1.4rem;
+  --spacing-12: 4rem;
+  --spacing-24: 8.5rem;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--background);
+  color: var(--on-surface);
+  font-family: 'Inter', sans-serif;
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6, .display-lg, .headline-lg {
+  font-family: 'Noto Serif', serif;
+  color: var(--primary);
+  margin-top: 0;
+}
+
+.display-lg {
+  font-size: 3.5rem;
+}
+
+.headline-lg {
+  font-size: 2rem;
+}
+
+.title-md {
+  font-size: 1.125rem;
+  font-weight: 600;
+}
+
+.body-md {
+  font-size: 0.875rem;
+}
+
+.label-sm {
+  font-size: 0.6875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+}
+
+/* Glassmorphism */
+.glass {
+  background-color: rgba(238, 238, 238, 0.7); /* surface-container */
+  backdrop-filter: blur(20px);
+}
+
+/* Base card styling */
+.card {
+  background-color: var(--surface-container-lowest);
+  box-shadow: 0 4px 40px rgba(27, 27, 27, 0.04);
+  padding: var(--spacing-4);
+  border-radius: 0; /* strict no-rounded-corners */
+}
+
+/* Inputs */
+input, textarea {
+  border: none;
+  border-bottom: 1px solid var(--outline-variant);
+  background: transparent;
+  font-family: 'Inter', sans-serif;
+  color: var(--on-surface);
+  padding: 0.5rem 0;
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+
+input:focus, textarea:focus {
+  border-bottom: 1px solid var(--primary);
+}
+
+/* Buttons */
+.btn-primary {
+  background-color: var(--primary);
+  color: var(--on-primary);
+  border: none;
+  border-radius: 0;
+  padding: 0.7rem var(--spacing-4);
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: var(--primary);
+  border: 1px solid rgba(198, 198, 198, 0.15); /* Ghost Border */
+  border-radius: 0;
+  padding: 0.7rem var(--spacing-4);
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.btn-tertiary {
+  background: none;
+  border: none;
+  color: var(--primary);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 0;
+}

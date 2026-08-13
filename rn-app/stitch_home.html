@@ -1,0 +1,245 @@
+<!DOCTYPE html><html class="light" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>R.N. Enterprises - Architectural Integrity</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-tertiary-container": "#be8b14",
+                        "on-error-container": "#93000a",
+                        "on-surface-variant": "#504442",
+                        "primary-fixed-dim": "#e3beb8",
+                        "surface-variant": "#e2e2e2",
+                        "secondary": "#546067",
+                        "on-background": "#1a1c1c",
+                        "on-primary": "#ffffff",
+                        "on-primary-container": "#ae8d87",
+                        "inverse-surface": "#2f3131",
+                        "on-primary-fixed": "#2b1613",
+                        "secondary-fixed-dim": "#bbc8d0",
+                        "surface": "#f9f9f9",
+                        "primary-fixed": "#ffdad4",
+                        "on-surface": "#1a1c1c",
+                        "primary-container": "#3e2723",
+                        "inverse-primary": "#e3beb8",
+                        "surface-tint": "#745853",
+                        "surface-container": "#eeeeee",
+                        "secondary-container": "#d7e4ec",
+                        "secondary-fixed": "#d7e4ec",
+                        "tertiary-fixed-dim": "#f7bd48",
+                        "tertiary-container": "#3c2900",
+                        "on-tertiary-fixed-variant": "#5d4200",
+                        "surface-dim": "#dadada",
+                        "on-secondary-fixed-variant": "#3c494f",
+                        "inverse-on-surface": "#f0f1f1",
+                        "on-tertiary": "#ffffff",
+                        "error-container": "#ffdad6",
+                        "surface-container-low": "#f3f3f3",
+                        "outline": "#827472",
+                        "on-secondary": "#ffffff",
+                        "on-secondary-container": "#5a666d",
+                        "on-secondary-fixed": "#111d23",
+                        "on-tertiary-fixed": "#271900",
+                        "outline-variant": "#d3c3c0",
+                        "primary": "#271310",
+                        "surface-bright": "#f9f9f9",
+                        "tertiary-fixed": "#ffdea6",
+                        "tertiary": "#221600",
+                        "surface-container-high": "#e8e8e8",
+                        "background": "#f9f9f9",
+                        "error": "#ba1a1a",
+                        "on-error": "#ffffff",
+                        "surface-container-highest": "#e2e2e2",
+                        "surface-container-lowest": "#ffffff",
+                        "on-primary-fixed-variant": "#5b403c"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "gutter": "24px",
+                        "margin-mobile": "16px",
+                        "base": "8px",
+                        "margin-desktop": "64px",
+                        "max-width": "1440px"
+                    },
+                    "fontFamily": {
+                        "headline-lg": ["Montserrat"],
+                        "body-lg": ["Inter"],
+                        "body-md": ["Inter"],
+                        "label-md": ["Inter"],
+                        "headline-display": ["Montserrat"],
+                        "headline-lg-mobile": ["Montserrat"],
+                        "headline-md": ["Montserrat"],
+                        "label-sm": ["Inter"]
+                    },
+                    "fontSize": {
+                        "headline-lg": ["40px", { "lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+                        "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "body-md": ["16px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "label-md": ["14px", { "lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "600" }],
+                        "headline-display": ["64px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "headline-lg-mobile": ["32px", { "lineHeight": "1.2", "fontWeight": "700" }],
+                        "headline-md": ["24px", { "lineHeight": "1.3", "fontWeight": "600" }],
+                        "label-sm": ["12px", { "lineHeight": "1.2", "fontWeight": "500" }]
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-surface text-on-surface font-body-md antialiased min-h-screen flex flex-col">
+<!-- TopNavBar -->
+<header class="bg-surface dark:bg-surface-dim docked full-width top-0 border-b border-outline-variant/20 dark:border-outline/30 sticky z-50">
+<div class="flex justify-between items-center w-full px-gutter max-w-max-width mx-auto h-20">
+<div class="flex items-center h-12"><img alt="R.N. Enterprises Logo" class="h-full w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBv1xgGNToLrnJufzVn1Ktc8kLuzqjKhdKDTKsSPzDqQgfsmXkvMqyyaoYhS02-93OUpMeAAXVhmGqnS0uM_G1uhDswbyBqMe3u77f6l1YIXMXpM4cAs-Nin1nhPrzcHk5318H5XDTfyT5l5Cqjpw_L-XrngcDABSHFnshZdBNUU3i60T4waKINcyAb2Jxu66nO7zdgttZMN4YalcrpcWOuiBEBSGhjY9Pw1Bynlmy9y7SP4UOOWwaVpTzwL3jz9bIJxmg"></div>
+<nav class="hidden md:flex space-x-8">
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-primary transition-colors hover:bg-surface-container-low dark:hover:bg-surface-container-highest transition-all py-2 px-3 rounded" href="#">Catalog</a>
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-primary transition-colors hover:bg-surface-container-low dark:hover:bg-surface-container-highest transition-all py-2 px-3 rounded" href="#">Materials</a>
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-primary transition-colors hover:bg-surface-container-low dark:hover:bg-surface-container-highest transition-all py-2 px-3 rounded" href="#">Hardware</a>
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-primary transition-colors hover:bg-surface-container-low dark:hover:bg-surface-container-highest transition-all py-2 px-3 rounded" href="#">Dashboard</a>
+</nav>
+<div class="flex items-center space-x-4">
+<button class="hidden md:block bg-primary text-on-primary px-4 py-2 rounded-DEFAULT font-label-md text-label-md hover:opacity-90 transition-opacity">WhatsApp Order</button>
+<button aria-label="shopping_cart" class="text-on-surface hover:text-primary transition-colors">
+<span class="material-symbols-outlined">shopping_cart</span>
+</button>
+<button aria-label="account_circle" class="text-on-surface hover:text-primary transition-colors">
+<span class="material-symbols-outlined">account_circle</span>
+</button>
+</div>
+</div>
+</header>
+<main class="flex-grow">
+<!-- Hero Section -->
+<section class="relative w-full h-[716px] flex items-center justify-center bg-surface-container overflow-hidden">
+<div class="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-80" data-alt="A high-end architectural scene featuring a massive, perfectly crafted solid wood door with intricate grain patterns, slightly ajar, revealing a brightly lit, modern industrial interior with brushed gold accents and exposed concrete. The lighting is dramatic and warm, highlighting the texture and premium quality of the wood and metal hardware. The overall mood is luxurious, sturdy, and aspirational, fitting for a top-tier materials supplier." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCeirrCCqeUMH4Q3paPJMxJ3zMuDKRPZ6VONH6yyd1Y_nl9M64ogmVSIjFpI4tbDdmf7lw_pseQw8I-vESpnKmqDdisLwLpMN5poRMy-Ku5pJ9oPb5F9w2ybUco3aM-xliaIiwf0Ss_ASFmPLNNg4cVm-o5eAoq0SrfDSsvmm2f0vI-44AFgq8_tdt4NfwlvNUw4x0P8Uk1_pILkKyFa7MoiV1izNYArEY-43am0Ivr7qfXco8I8C7w5A')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-surface via-transparent to-surface/30"></div>
+<div class="relative z-10 text-center px-gutter max-w-4xl mx-auto">
+<h1 class="font-headline-display text-headline-display md:hidden text-headline-lg-mobile text-primary drop-shadow-md mb-6">Architectural Integrity<br>in Every Grain.</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto mb-8 bg-surface/80 p-4 rounded-lg backdrop-blur-sm border border-outline-variant/30">
+                    Supplying homeowners, architects, and business managers with precision engineering and high-end materials.
+                </p>
+<button class="bg-primary text-on-primary font-label-md text-label-md px-8 py-4 rounded-DEFAULT shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300">
+                    Explore Our Catalog
+                </button>
+</div>
+</section>
+<!-- Category Navigation -->
+<section class="py-margin-desktop px-gutter max-w-max-width mx-auto">
+<div class="text-center mb-16">
+<h2 class="font-headline-lg text-headline-lg text-primary mb-4">Our Core Offerings</h2>
+<div class="h-1 w-24 bg-tertiary-fixed-dim mx-auto"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Doors -->
+<a class="group block relative h-96 rounded-lg overflow-hidden border border-outline-variant/20 shadow-sm hover:shadow-[0px_4px_20px_rgba(38,50,56,0.08)] transition-all duration-300 bg-white" href="#">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="A beautifully crafted, modern minimalist interior door featuring a rich, deep walnut finish. The door is set against a clean, white architectural wall in a well-lit, contemporary setting. The focus is on the flawless wood veneer and the solid, premium construction. The lighting casts soft, directional shadows, emphasizing the door's substantial presence and high-quality tactile feel." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuChaSsqC6VJeDBJdWACwNc84UQ67PHLL6Gi_bB58Gja3ADx5B9AHRyXXjrhshTaWGjjMdptm3ba4ViUKSMBqw-bHCwhkkQ2wmXs4ix0DQ-oaq9XVJ5ErSoibBPhPOV8xIE9vuVOwLNsjDDmoUkeWMv9nFFlC3xwY5s2q5C0YAZ9AQqiHCujrH93pOqwCMc-WfWSmYK_zAtZyJE377BdvbqzwI49Uds9MOKJkl8_o0YQBnE589_3LAPKQw')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/20 to-transparent"></div>
+<div class="absolute bottom-0 left-0 w-full p-6 pb-[24px]">
+<h3 class="font-headline-md text-headline-md text-white mb-2 group-hover:text-tertiary-fixed transition-colors">Doors</h3>
+<p class="font-body-md text-body-md text-white/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform translate-y-4 group-hover:translate-y-0">Premium Laminate &amp; Teakwood</p>
+</div>
+</a>
+<!-- Door Frames -->
+<a class="group block relative h-96 rounded-lg overflow-hidden border border-outline-variant/20 shadow-sm hover:shadow-[0px_4px_20px_rgba(38,50,56,0.08)] transition-all duration-300 bg-white" href="#">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="A close-up, precision shot of a heavy-duty, meticulously milled door frame constructed from high-grade timber. The frame is presented in a bright, industrial workshop setting, with tools and blueprints subtly out of focus in the background. The lighting is sharp and analytical, highlighting the precise joins, smooth finish, and structural stability of the product. The mood conveys reliability and exact engineering." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAJ8zSjsG-iCB2a78XHU3fGZNCeLYvMMv-jLIXjO8hE20GTsgZniWLhr0ZRGofK8vqtiKiCd3bn9GjL3xyMkW-_P7CwE_BfFQHl_YDKQRs2AhfpK5l8kGl26NXn15_NO-75mrsloHfs_9GsvKZ5aRHhGQZh0pAsqZ87kxK7Glt_knl9U3cP9p-TXeWoE3-WcnoYvgGljIhrmiMd1k8lAohi7qJZjOBaTkxtuodHT9EUd5hGHX_rYy8Qyg')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/20 to-transparent"></div>
+<div class="absolute bottom-0 left-0 w-full p-6 pb-[24px]">
+<h3 class="font-headline-md text-headline-md text-white mb-2 group-hover:text-tertiary-fixed transition-colors">Door Frames</h3>
+<p class="font-body-md text-body-md text-white/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform translate-y-4 group-hover:translate-y-0">Engineered for Stability</p>
+</div>
+</a>
+<!-- Hardware -->
+<a class="group block relative h-96 rounded-lg overflow-hidden border border-outline-variant/20 shadow-sm hover:shadow-[0px_4px_20px_rgba(38,50,56,0.08)] transition-all duration-300 bg-white" href="#">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="A detailed, macro photography shot of premium architectural hardware. The image features a solid, brushed brass door handle mounted on a dark, textured wood surface. The lighting is dramatic, creating sharp highlights on the metallic surface to showcase its weight, quality, and flawless finish. The aesthetic is tactile, modern, and highly engineered, communicating luxury and durability." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBquxYPAx0A6UAanZSal8DIHUDfPjHGjvg71VfAMNmVai_tLi2wvarrcINad8-SwCpGG_OkcsqLAMsQUz9ApIQRyRRf0JIY4dEhr0UiLucGMLbr1hbHnXD_mqMb4IQKyWMTZScP9YsmJQQmj1D3SAG8Q0iUQS-LodqbwXVrJkub4MmaMZcO_LYUfzAKyPo7rpRSjOfTUjenfxUx9qdFyLAIY6TxTFr_FU1n3fPPpd0qP8SMN6P15kOnwQ')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/20 to-transparent"></div>
+<div class="absolute bottom-0 left-0 w-full p-6 pb-[24px]">
+<h3 class="font-headline-md text-headline-md text-white mb-2 group-hover:text-tertiary-fixed transition-colors">Hardware</h3>
+<p class="font-body-md text-body-md text-white/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform translate-y-4 group-hover:translate-y-0">Tactile Industrial Details</p>
+</div>
+</a>
+</div>
+</section>
+<!-- Contact Section -->
+<section class="bg-surface-container-low py-margin-desktop border-t border-outline-variant/20">
+<div class="px-gutter max-w-max-width mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-16">
+<div>
+<h2 class="font-headline-lg text-headline-lg text-primary mb-6">Connect With Us</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-8">Ready to elevate your architectural projects? Contact our team for bespoke solutions, bulk orders, or detailed specifications.</p>
+<div class="space-y-6">
+<div class="flex items-start space-x-4">
+<span class="material-symbols-outlined text-primary mt-1">location_on</span>
+<div>
+<h4 class="font-label-md text-label-md text-primary mb-1">Corporate Office</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">123 Industrial Park Way, Sector 4<br>Metro City, 10001</p>
+</div>
+</div>
+<div class="flex items-start space-x-4">
+<span class="material-symbols-outlined text-primary mt-1">phone</span>
+<div>
+<h4 class="font-label-md text-label-md text-primary mb-1">Direct Line</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">+1 (555) 019-2837</p>
+</div>
+</div>
+<div class="flex items-start space-x-4">
+<span class="material-symbols-outlined text-primary mt-1">mail</span>
+<div>
+<h4 class="font-label-md text-label-md text-primary mb-1">Email Inquiries</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">sales@rnenterprises.com</p>
+</div>
+</div>
+</div>
+</div>
+<div class="bg-white p-8 rounded-lg border border-outline-variant/20 shadow-sm">
+<form class="space-y-6">
+<div>
+<label class="block font-label-md text-label-md text-primary mb-2">Name</label>
+<input class="w-full bg-surface border border-outline-variant/50 rounded-DEFAULT px-4 py-3 font-body-md text-body-md focus:outline-none focus:border-tertiary-fixed-dim focus:ring-1 focus:ring-tertiary-fixed-dim transition-colors" placeholder="Your Name" type="text">
+</div>
+<div>
+<label class="block font-label-md text-label-md text-primary mb-2">Email</label>
+<input class="w-full bg-surface border border-outline-variant/50 rounded-DEFAULT px-4 py-3 font-body-md text-body-md focus:outline-none focus:border-tertiary-fixed-dim focus:ring-1 focus:ring-tertiary-fixed-dim transition-colors" placeholder="your@email.com" type="email">
+</div>
+<div>
+<label class="block font-label-md text-label-md text-primary mb-2">Message</label>
+<textarea class="w-full bg-surface border border-outline-variant/50 rounded-DEFAULT px-4 py-3 font-body-md text-body-md focus:outline-none focus:border-tertiary-fixed-dim focus:ring-1 focus:ring-tertiary-fixed-dim transition-colors" placeholder="How can we help?" rows="4"></textarea>
+</div>
+<button class="w-full bg-primary text-on-primary font-label-md text-label-md px-6 py-4 rounded-DEFAULT shadow-sm hover:bg-primary-container transition-colors" type="button">
+                                Send Inquiry
+                            </button>
+</form>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-primary dark:bg-primary-container text-on-primary dark:text-on-primary-fixed full-width bottom py-12 px-gutter max-w-max-width mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+<div>
+<div class="mb-4 h-12 flex items-start"><img alt="R.N. Enterprises Logo" class="h-full w-auto object-contain brightness-0 invert" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAdjGsqwzGs53eljF3UCiU25Rzl_IdCyxrh6q9n4LJur4Ds867o2iK3PUa-vLylUGGxj0z5tAzPR6xnhfRC6pTe6Uc4f9CKUjoSOQFP49ZRPv9m5EgpJS_8_Nh0BkI1EopF0uuOXPQaVFG2TOdzDj-1eHPa6UJGRXhQvgivKQ34lVNe0WYvS5IrcjD9RhIrgUk7a7w7ps-Rd3WR5WhS6_da_KeoJ4Eadna_698a3QXZbZqzrOszWOrl6F_xGvP6jMvapdQ"></div>
+<p class="font-body-md text-body-md text-on-primary/80">© 2024 R.N. Enterprises. Architectural Integrity in Every Grain.</p>
+</div>
+<div class="col-span-2 flex flex-wrap gap-x-8 gap-y-4 md:justify-end items-start font-body-md text-body-md font-label-sm text-label-sm">
+<a class="text-on-primary/80 hover:text-on-primary transition-colors hover:underline decoration-tertiary-fixed underline-offset-4 focus:ring-2 focus:ring-tertiary-fixed rounded outline-none p-1" href="#">Laminate Doors</a>
+<a class="text-on-primary/80 hover:text-on-primary transition-colors hover:underline decoration-tertiary-fixed underline-offset-4 focus:ring-2 focus:ring-tertiary-fixed rounded outline-none p-1" href="#">PVC Solutions</a>
+<a class="text-on-primary/80 hover:text-on-primary transition-colors hover:underline decoration-tertiary-fixed underline-offset-4 focus:ring-2 focus:ring-tertiary-fixed rounded outline-none p-1" href="#">Teakwood Collection</a>
+<a class="text-on-primary/80 hover:text-on-primary transition-colors hover:underline decoration-tertiary-fixed underline-offset-4 focus:ring-2 focus:ring-tertiary-fixed rounded outline-none p-1" href="#">Hardware Catalog</a>
+<a class="text-on-primary/80 hover:text-on-primary transition-colors hover:underline decoration-tertiary-fixed underline-offset-4 focus:ring-2 focus:ring-tertiary-fixed rounded outline-none p-1" href="#">Privacy Policy</a>
+<a class="text-on-primary/80 hover:text-on-primary transition-colors hover:underline decoration-tertiary-fixed underline-offset-4 focus:ring-2 focus:ring-tertiary-fixed rounded outline-none p-1" href="#">Contact Us</a>
+</div>
+</footer>
+
+
+</body></html>

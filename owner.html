@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Owner Dashboard - R.N. Enterprises</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@600;700&display=swap" rel="stylesheet"/>
+<script src="app.js"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+        darkMode: "class",
+        theme: {
+            extend: {
+                "colors": {
+                    "primary": "#271310",
+                    "on-primary": "#ffffff",
+                    "primary-container": "#3e2723",
+                    "surface": "#f9f9f9",
+                    "on-surface": "#1a1c1c",
+                    "surface-container-low": "#f3f3f3",
+                    "surface-container-highest": "#e2e2e2",
+                    "outline-variant": "#d3c3c0",
+                    "secondary": "#546067"
+                },
+                "fontFamily": {
+                    "headline-display": ["Montserrat"],
+                    "headline-lg": ["Montserrat"],
+                    "headline-md": ["Montserrat"],
+                    "body-lg": ["Inter"],
+                    "body-md": ["Inter"],
+                    "label-md": ["Inter"]
+                }
+            }
+        }
+    }
+</script>
+<style>
+.material-symbols-outlined { font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24 }
+</style>
+</head>
+<body class="bg-surface text-on-surface min-h-screen font-body-md overflow-x-hidden">
+
+<header class="bg-surface docked full-width top-0 border-b border-outline-variant/20 sticky z-50">
+    <div class="flex justify-between items-center w-full px-8 max-w-7xl mx-auto h-20">
+        <a href="index.html" class="flex items-center h-12">
+            <img alt="R.N. Enterprises Logo" class="h-full w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBv1xgGNToLrnJufzVn1Ktc8kLuzqjKhdKDTKsSPzDqQgfsmXkvMqyyaoYhS02-93OUpMeAAXVhmGqnS0uM_G1uhDswbyBqMe3u77f6l1YIXMXpM4cAs-Nin1nhPrzcHk5318H5XDTfyT5l5Cqjpw_L-XrngcDABSHFnshZdBNUU3i60T4waKINcyAb2Jxu66nO7zdgttZMN4YalcrpcWOuiBEBSGhjY9Pw1Bynlmy9y7SP4UOOWwaVpTzwL3jz9bIJxmg">
+        </a>
+        <nav class="hidden md:flex space-x-8">
+            <a class="text-on-surface hover:text-primary transition-colors py-2 px-3" href="doors.html">Doors</a>
+            <a class="text-on-surface hover:text-primary transition-colors py-2 px-3" href="frames.html">Frames</a>
+            <a class="text-on-surface hover:text-primary transition-colors py-2 px-3" href="hardware.html">Hardware</a>
+            <a class="text-on-surface font-bold hover:text-primary transition-colors py-2 px-3 border-b-2 border-primary" href="owner.html">Owner Login</a>
+        </nav>
+    </div>
+</header>
+
+<main class="w-full min-h-screen py-16 px-8 max-w-5xl mx-auto">
+    
+    <!-- Login Section -->
+    <div id="login-section" class="max-w-md mx-auto bg-white p-8 rounded-xl border border-outline-variant/20 shadow-lg text-center">
+        <h2 class="text-2xl font-bold text-primary mb-4">Owner Authentication</h2>
+        <p class="text-secondary mb-6 text-sm">Please enter the passcode to access the dashboard. (Default: 1234)</p>
+        <input type="password" id="passcode" class="w-full border border-outline-variant/50 rounded px-4 py-2 mb-4 text-center text-xl tracking-widest">
+        <button onclick="login()" class="w-full bg-primary text-on-primary py-3 rounded font-bold hover:opacity-90 transition">Login</button>
+    </div>
+
+    <!-- Dashboard Section -->
+    <div id="dashboard-section" class="hidden space-y-8">
+        <div class="flex justify-between items-end border-b border-outline-variant/20 pb-4">
+            <div>
+                <h1 class="font-headline-display text-4xl text-primary mb-2">Owner Dashboard</h1>
+                <p class="text-secondary">Manage your catalog links, designs, and hardware options.</p>
+            </div>
+            <button onclick="saveAllSettings()" class="bg-primary text-on-primary px-6 py-2 rounded font-bold shadow hover:opacity-90 flex items-center gap-2">
+                <span class="material-symbols-outlined">save</span> Save Changes
+            </button>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            
+            <!-- PDF Links -->
+            <div class="bg-white p-6 rounded-xl border border-outline-variant/20 shadow-sm">
+                <h3 class="text-xl font-bold text-primary mb-4 flex items-center gap-2">
+                    <span class="material-symbols-outlined">link</span> Design PDF Links
+                </h3>
+                <p class="text-sm text-secondary mb-6">Paste the Google Drive or Dropbox links for each door category's design catalog.</p>
+                
+                <form id="pdf-form" class="space-y-4">
+                    <div>
+                        <label class="block text-sm font-bold text-primary mb-1">Laminate PDF Link</label>
+                        <input type="url" name="laminate" class="w-full border border-outline-variant/50 rounded px-3 py-2 text-sm bg-surface">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-bold text-primary mb-1">Lamination PDF Link</label>
+                        <input type="url" name="lamination" class="w-full border border-outline-variant/50 rounded px-3 py-2 text-sm bg-surface">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-bold text-primary mb-1">PVC PDF Link</label>
+                        <input type="url" name="pvc" class="w-full border border-outline-variant/50 rounded px-3 py-2 text-sm bg-surface">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-bold text-primary mb-1">FRP PDF Link</label>
+                        <input type="url" name="frp" class="w-full border border-outline-variant/50 rounded px-3 py-2 text-sm bg-surface">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-bold text-primary mb-1">ACP PDF Link</label>
+                        <input type="url" name="acp" class="w-full border border-outline-variant/50 rounded px-3 py-2 text-sm bg-surface">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-bold text-primary mb-1">Teakwood PDF Link</label>
+                        <input type="url" name="teakwood" class="w-full border border-outline-variant/50 rounded px-3 py-2 text-sm bg-surface">
+                    </div>
+                </form>
+            </div>
+
+            <div class="space-y-8">
+                <!-- Designs List -->
+                <div class="bg-white p-6 rounded-xl border border-outline-variant/20 shadow-sm">
+                    <h3 class="text-xl font-bold text-primary mb-4 flex items-center gap-2">
+                        <span class="material-symbols-outlined">category</span> Design Patterns
+                    </h3>
+                    <textarea id="designs-input" rows="5" class="w-full border border-outline-variant/50 rounded px-3 py-2 text-sm bg-surface" placeholder="Enter one design per line..."></textarea>
+                    <p class="text-xs text-secondary mt-2">These appear in the 'Select Design' dropdown. Put one item per line.</p>
+                </div>
+
+                <!-- Hardware List -->
+                <div class="bg-white p-6 rounded-xl border border-outline-variant/20 shadow-sm">
+                    <h3 class="text-xl font-bold text-primary mb-4 flex items-center gap-2">
+                        <span class="material-symbols-outlined">hardware</span> Hardware Pricing
+                    </h3>
+                    <textarea id="hardware-input" rows="6" class="w-full border border-outline-variant/50 rounded px-3 py-2 text-sm bg-surface font-mono" placeholder="Item Name, Price"></textarea>
+                    <p class="text-xs text-secondary mt-2">Format: `Name, Price` per line. (e.g. `Brass Hinge, 150`)</p>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</main>
+
+<script>
+    function login() {
+        if(document.getElementById('passcode').value === '1234') {
+            document.getElementById('login-section').classList.add('hidden');
+            document.getElementById('dashboard-section').classList.remove('hidden');
+            loadData();
+        } else {
+            alert('Incorrect passcode');
+        }
+    }
+
+    function loadData() {
+        const ownerData = getOwnerData();
+        const form = document.getElementById('pdf-form');
+        
+        // Load PDFs
+        form.laminate.value = ownerData.doorPdfs.laminate || "";
+        form.lamination.value = ownerData.doorPdfs.lamination || "";
+        form.pvc.value = ownerData.doorPdfs.pvc || "";
+        form.frp.value = ownerData.doorPdfs.frp || "";
+        form.acp.value = ownerData.doorPdfs.acp || "";
+        form.teakwood.value = ownerData.doorPdfs.teakwood || "";
+
+        // Load Designs
+        document.getElementById('designs-input').value = ownerData.designs.join('\\n');
+
+        // Load Hardware
+        document.getElementById('hardware-input').value = ownerData.hardware.map(h => `${h.name}, ${h.price}`).join('\\n');
+    }
+
+    function saveAllSettings() {
+        const form = document.getElementById('pdf-form');
+        const designs = document.getElementById('designs-input').value.split('\\n').map(d => d.trim()).filter(d => d);
+        
+        const hardwareLines = document.getElementById('hardware-input').value.split('\\n').filter(l => l.trim() !== '');
+        const hardware = hardwareLines.map(line => {
+            const parts = line.split(',');
+            return {
+                name: parts[0] ? parts[0].trim() : 'Unknown',
+                price: parts[1] ? parseInt(parts[1].trim()) || 0 : 0
+            };
+        });
+
+        const ownerData = {
+            doorPdfs: {
+                laminate: form.laminate.value,
+                lamination: form.lamination.value,
+                pvc: form.pvc.value,
+                frp: form.frp.value,
+                acp: form.acp.value,
+                teakwood: form.teakwood.value
+            },
+            designs: designs,
+            hardware: hardware
+        };
+
+        saveOwnerData(ownerData);
+        alert('Settings saved successfully!');
+    }
+</script>
+</body></html>

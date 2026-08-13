@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>R.N. Enterprises - Post Forming Door Frames</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@600;700&display=swap" rel="stylesheet"/>
+<script src="app.js"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+        darkMode: "class",
+        theme: {
+            extend: {
+                "colors": {
+                    "primary": "#271310",
+                    "on-primary": "#ffffff",
+                    "primary-container": "#3e2723",
+                    "surface": "#f9f9f9",
+                    "on-surface": "#1a1c1c",
+                    "surface-container-low": "#f3f3f3",
+                    "surface-container-highest": "#e2e2e2",
+                    "outline-variant": "#d3c3c0",
+                    "secondary": "#546067"
+                },
+                "fontFamily": {
+                    "headline-display": ["Montserrat"],
+                    "headline-lg": ["Montserrat"],
+                    "headline-md": ["Montserrat"],
+                    "body-lg": ["Inter"],
+                    "body-md": ["Inter"],
+                    "label-md": ["Inter"]
+                }
+            }
+        }
+    }
+</script>
+<style>
+.material-symbols-outlined { font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24 }
+</style>
+</head>
+<body class="bg-surface text-on-surface min-h-screen font-body-md overflow-x-hidden">
+
+<header class="bg-surface docked full-width top-0 border-b border-outline-variant/20 sticky z-50">
+    <div class="flex justify-between items-center w-full px-8 max-w-7xl mx-auto h-20">
+        <a href="index.html" class="flex items-center h-12">
+            <img alt="R.N. Enterprises Logo" class="h-full w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBv1xgGNToLrnJufzVn1Ktc8kLuzqjKhdKDTKsSPzDqQgfsmXkvMqyyaoYhS02-93OUpMeAAXVhmGqnS0uM_G1uhDswbyBqMe3u77f6l1YIXMXpM4cAs-Nin1nhPrzcHk5318H5XDTfyT5l5Cqjpw_L-XrngcDABSHFnshZdBNUU3i60T4waKINcyAb2Jxu66nO7zdgttZMN4YalcrpcWOuiBEBSGhjY9Pw1Bynlmy9y7SP4UOOWwaVpTzwL3jz9bIJxmg">
+        </a>
+        <nav class="hidden md:flex space-x-8">
+            <a class="text-on-surface hover:text-primary transition-colors py-2 px-3" href="doors.html">Doors</a>
+            <a class="text-on-surface font-bold hover:text-primary transition-colors py-2 px-3 border-b-2 border-primary" href="frames.html">Frames</a>
+            <a class="text-on-surface hover:text-primary transition-colors py-2 px-3" href="hardware.html">Hardware</a>
+            <a class="text-on-surface hover:text-primary transition-colors py-2 px-3" href="owner.html">Owner Login</a>
+        </nav>
+        <div class="flex items-center space-x-4">
+            <a href="cart.html" class="hidden md:block bg-primary text-on-primary px-4 py-2 rounded font-label-md hover:opacity-90 transition-opacity flex items-center gap-2">
+                <span class="material-symbols-outlined text-sm">shopping_cart</span> Cart (<span id="cart-count">0</span>)
+            </a>
+        </div>
+    </div>
+</header>
+
+<main class="w-full min-h-screen py-16 px-8 max-w-7xl mx-auto">
+    <div class="mb-12">
+        <h1 class="font-headline-display text-4xl md:text-5xl text-primary mb-4">Post Forming Door Frames</h1>
+        <p class="font-body-lg text-lg text-secondary max-w-3xl">
+            Engineered for stability and designed for seamless integration. Browse our high-quality door frames.
+        </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Frame 1 -->
+        <div class="bg-white rounded-xl border border-outline-variant/20 shadow-md overflow-hidden flex flex-col">
+            <img src="https://images.unsplash.com/photo-1541123437800-14131577f805?w=600&h=400&fit=crop" class="h-48 w-full object-cover" alt="Standard Post Forming Frame">
+            <div class="p-6 flex-grow flex flex-col">
+                <h3 class="text-2xl font-bold text-primary mb-2">Standard Post Forming Frame</h3>
+                <p class="text-secondary mb-4 flex-grow">Durable and moisture resistant post-forming door frame ideal for interior spaces.</p>
+                <form onsubmit="handleAddToCart(event, 'Standard Post Forming Frame')" class="space-y-4">
+                    <div class="grid grid-cols-2 gap-2">
+                        <input type="number" name="height" class="w-full border border-outline-variant/50 rounded px-3 py-2 bg-white" placeholder="H (mm)" required>
+                        <input type="number" name="width" class="w-full border border-outline-variant/50 rounded px-3 py-2 bg-white" placeholder="W (mm)" required>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <input type="number" name="qty" class="w-20 border border-outline-variant/50 rounded px-3 py-2 bg-white" value="1" min="1" required>
+                        <button type="submit" class="flex-grow bg-primary text-on-primary py-2 rounded font-bold hover:opacity-90">Add to Cart</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        
+        <!-- Frame 2 -->
+        <div class="bg-white rounded-xl border border-outline-variant/20 shadow-md overflow-hidden flex flex-col">
+            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600&h=400&fit=crop" class="h-48 w-full object-cover" alt="Premium Teak Post Forming Frame">
+            <div class="p-6 flex-grow flex flex-col">
+                <h3 class="text-2xl font-bold text-primary mb-2">Premium Teak Post Forming</h3>
+                <p class="text-secondary mb-4 flex-grow">Aesthetic teak finish with the durability of engineered post-forming structure.</p>
+                <form onsubmit="handleAddToCart(event, 'Premium Teak Post Forming Frame')" class="space-y-4">
+                    <div class="grid grid-cols-2 gap-2">
+                        <input type="number" name="height" class="w-full border border-outline-variant/50 rounded px-3 py-2 bg-white" placeholder="H (mm)" required>
+                        <input type="number" name="width" class="w-full border border-outline-variant/50 rounded px-3 py-2 bg-white" placeholder="W (mm)" required>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <input type="number" name="qty" class="w-20 border border-outline-variant/50 rounded px-3 py-2 bg-white" value="1" min="1" required>
+                        <button type="submit" class="flex-grow bg-primary text-on-primary py-2 rounded font-bold hover:opacity-90">Add to Cart</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        
+        <!-- Frame 3 -->
+        <div class="bg-white rounded-xl border border-outline-variant/20 shadow-md overflow-hidden flex flex-col">
+            <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?w=600&h=400&fit=crop" class="h-48 w-full object-cover" alt="Heavy Duty Post Forming Frame">
+            <div class="p-6 flex-grow flex flex-col">
+                <h3 class="text-2xl font-bold text-primary mb-2">Heavy Duty Commercial Frame</h3>
+                <p class="text-secondary mb-4 flex-grow">Designed for high-traffic environments, reinforced post-forming construction.</p>
+                <form onsubmit="handleAddToCart(event, 'Heavy Duty Commercial Frame')" class="space-y-4">
+                    <div class="grid grid-cols-2 gap-2">
+                        <input type="number" name="height" class="w-full border border-outline-variant/50 rounded px-3 py-2 bg-white" placeholder="H (mm)" required>
+                        <input type="number" name="width" class="w-full border border-outline-variant/50 rounded px-3 py-2 bg-white" placeholder="W (mm)" required>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <input type="number" name="qty" class="w-20 border border-outline-variant/50 rounded px-3 py-2 bg-white" value="1" min="1" required>
+                        <button type="submit" class="flex-grow bg-primary text-on-primary py-2 rounded font-bold hover:opacity-90">Add to Cart</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</main>
+
+<script>
+    function handleAddToCart(e, frameName) {
+        e.preventDefault();
+        const form = e.target;
+        const item = {
+            category: 'Frame',
+            type: frameName,
+            design: 'Standard',
+            hardware: 'N/A',
+            height: form.height.value,
+            width: form.width.value,
+            qty: parseInt(form.qty.value)
+        };
+        addToCart(item);
+    }
+</script>
+</body></html>
