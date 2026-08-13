@@ -3,6 +3,9 @@
 import { useState, useEffect, useRef } from "react";
 import { useSession } from "next-auth/react";
 import { useRouter } from "next/navigation";
+import dynamic from 'next/dynamic';
+
+const PdfThumbnail = dynamic(() => import('@/components/PdfThumbnail'), { ssr: false });
 
 export default function Doors() {
   const { data: session } = useSession();
@@ -214,6 +217,8 @@ export default function Doors() {
                           >
                             {m.img ? (
                               <img src={m.img} alt={m.name} className="w-full h-24 object-cover pointer-events-none" />
+                            ) : m.pdf ? (
+                              <PdfThumbnail file={m.pdf} />
                             ) : (
                               <div className="w-full h-24 bg-surface-container-low flex items-center justify-center pointer-events-none">
                                 <span className="material-symbols-outlined text-secondary/40 text-3xl">meeting_room</span>
