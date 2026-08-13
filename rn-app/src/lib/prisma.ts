@@ -9,7 +9,7 @@ let prisma: PrismaClient;
 if (globalForPrisma.prisma) {
   prisma = globalForPrisma.prisma;
 } else {
-  const connectionString = `${process.env.DATABASE_URL}`;
+  const connectionString = `${process.env.DATABASE_URL || process.env.POSTGRES_URL}`;
   const pool = new Pool({ connectionString });
   const adapter = new PrismaPg(pool);
   prisma = new PrismaClient({ adapter });
