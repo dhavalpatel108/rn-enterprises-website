@@ -127,6 +127,15 @@ export default function Home() {
                     <p className="font-body-md text-body-md text-on-surface-variant">rnenterprises1960@gmail.com</p>
                   </div>
                 </div>
+                <div className="flex items-start space-x-4">
+                  <span className="material-symbols-outlined text-primary mt-1">photo_camera</span>
+                  <div>
+                    <h4 className="font-label-md text-label-md text-primary mb-1">Instagram</h4>
+                    <a href="https://www.instagram.com/rnentprises1508?igsh=MWI5eWRyYWk1czYxOA==" target="_blank" rel="noopener noreferrer" className="font-body-md text-body-md text-primary hover:text-primary/80 hover:underline decoration-primary underline-offset-2 transition-colors">
+                      @rnentprises1508
+                    </a>
+                  </div>
+                </div>
               </div>
             </div>
             <div className="bg-white p-8 rounded-lg border border-outline-variant/20 shadow-sm">
