@@ -42,6 +42,9 @@ export default function Navbar() {
           <Link href="/hardware" className="droplet-btn">
             Hardware
           </Link>
+          <Link href="/about" className="droplet-btn">
+            About Us
+          </Link>
           {session?.user && (session.user as any).role === "OWNER" && (
             <Link href="/owner" className="droplet-btn !bg-primary/10 !text-primary border-primary/30">
               Dashboard
@@ -97,6 +100,9 @@ export default function Navbar() {
           </Link>
           <Link href="/hardware" className="droplet-btn w-full justify-center" onClick={() => setIsMobileMenuOpen(false)}>
             Hardware
+          </Link>
+          <Link href="/about" className="droplet-btn w-full justify-center" onClick={() => setIsMobileMenuOpen(false)}>
+            About Us
           </Link>
           {session?.user && (session.user as any).role === "OWNER" && (
             <Link href="/owner" className="droplet-btn w-full justify-center !bg-primary/10 !text-primary border-primary/30" onClick={() => setIsMobileMenuOpen(false)}>

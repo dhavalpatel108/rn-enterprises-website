@@ -14,6 +14,7 @@
     "@types/pg": "^8.20.0",
     "@vercel/blob": "^2.6.1",
     "bcryptjs": "^3.0.3",
+    "google-tts-api": "^2.0.2",
     "jimp": "^1.6.1",
     "next": "16.2.12",
     "next-auth": "^4.24.15",
