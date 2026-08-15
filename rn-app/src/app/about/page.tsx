@@ -121,7 +121,7 @@ export default function AboutPage() {
               {content.title}
             </h2>
             {content.text.split('\n\n').map((paragraph, idx) => (
-              <p key={idx} className="font-body-lg text-lg text-on-surface/80 leading-relaxed text-justify">
+              <p key={idx} className="font-body-lg text-lg text-on-surface/80 leading-relaxed text-left md:text-justify">
                 {paragraph}
               </p>
             ))}
